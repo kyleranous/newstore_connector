@@ -32,6 +32,8 @@ class NewStoreConnector(APIConnector):
         self.client_id = kwargs.get("client_id")
         self.client_secret = kwargs.get("client_secret")
         self.role = kwargs.get("role", "iam:providers:read")
+    
+        # This needs to be done after super().__init__ because it uses the session created in the parent class
         self.token = kwargs.get("token") or self._get_auth_token()
 
         # Initialize empty instance variables for the API Classes
