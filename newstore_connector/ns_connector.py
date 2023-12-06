@@ -5,7 +5,8 @@ Module for defining the NewStoreConnector Class
 from api_toolkit.connector import APIConnector
 from api_toolkit import modifiers as m
 
-
+STATUS_FORCELIST = [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]
+BACKOFF_FACTOR = 2
 class NewStoreConnector(APIConnector):
     """
     Primary class for interacting with the NewStore API
@@ -16,8 +17,14 @@ class NewStoreConnector(APIConnector):
         """
         # Populate parameters and establish the connection
         self._validate_init_params(**kwargs)
+
+        # Check if retry settings have been passed, if not, set defaults
+        kwargs.setdefault("status_forcelist", STATUS_FORCELIST)
+        kwargs.setdefault("backoff_factor", BACKOFF_FACTOR)
+
         # Initialize the APIConnector Class features
         super().__init__(**kwargs)
+
         # Set the tenant information for the NewStore API
         self.tenant = kwargs.get("tenant")
         self.env = kwargs.get("env", "p")
