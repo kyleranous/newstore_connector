@@ -49,6 +49,7 @@ class OrderInjectionV01:
         response = self.session.post(url,
                                      headers=self.headers or kwargs.get('headers'),
                                      json=payload)
+        response.raise_for_status()
 
         return response
 
