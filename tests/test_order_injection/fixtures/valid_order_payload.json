@@ -1,0 +1,297 @@
+{
+    "shop": "storefront-catalog-en",
+    "shop_locale": "en-US",
+    "external_id": "9999999",
+    "channel_type": "web",
+    "channel_name": "USC",
+    "currency": "USD",
+    "customer_name": "Jason Juke",
+    "customer_email": "JasonJuke@fakemail.com",
+    "customer_locale": "EN-US",
+    "external_customer_id": "123456789",
+    "placed_at": "2023-12-06T18:27:18-05:00",
+    "price_method": "tax_excluded",
+    "shipping_address": {
+        "first_name": "Jason",
+        "last_name": "Juke",
+        "country": "US",
+        "zip_code": "27587",
+        "city": "Georgetown",
+        "state": "CO",
+        "address_line_1": "5508 Via Lombardia Plz",
+        "address_line_2": "",
+        "phone": "(999) 999-9999"
+    },
+    "billing_address": {
+        "first_name": "Jason",
+        "last_name": "Juke",
+        "country": "US",
+        "zip_code": "27587",
+        "city": "Georgetown",
+        "state": "CO",
+        "address_line_1": "5508 Via Lombardia Plz",
+        "address_line_2": "",
+        "phone": "(999) 999-9999"
+    },
+    "shipments": [
+        {
+            "items": [
+                {
+                    "external_item_id": "40240461643845",
+                    "product_id": "MWU2302-WRK-XL",
+                    "item_tax_lines": [
+                        {
+                            "amount": 2.13,
+                            "rate": 0.0475,
+                            "name": "NC STATE TAX"
+                        },
+                        {
+                            "amount": 0.9,
+                            "rate": 0.02,
+                            "name": "NC COUNTY TAX"
+                        },
+                        {
+                            "amount": 0.22,
+                            "rate": 0.005,
+                            "name": "NC SPECIAL TAX"
+                        }
+                    ],
+                    "price": {
+                        "item_price": 64,
+                        "item_list_price": 64,
+                        "item_tax_lines": [
+                            {
+                                "amount": 2.13,
+                                "rate": 0.0475,
+                                "name": "NC STATE TAX"
+                            },
+                            {
+                                "amount": 0.9,
+                                "rate": 0.02,
+                                "name": "NC COUNTY TAX"
+                            },
+                            {
+                                "amount": 0.22,
+                                "rate": 0.005,
+                                "name": "NC SPECIAL TAX"
+                            }
+                        ],
+                        "item_discount_info": [
+                            {
+                                "type": "percentage",
+                                "original_value": 30,
+                                "price_adjustment": 19.2,
+                                "discount_ref": "SALE30",
+                                "coupon_code": "",
+                                "description": ""
+                            }
+                        ],
+                        "item_order_discount_info": []
+                    },
+                    "extended_attributes": [
+                        {
+                            "name": "is_gift_card",
+                            "value": "False"
+                        },
+                        {
+                            "name": "requires_shipping",
+                            "value": "True"
+                        },
+                        {
+                            "name": "external_item_id",
+                            "value": "12773457592389"
+                        }
+                    ]
+                },
+                {
+                    "external_item_id": "40383447171141",
+                    "product_id": "MWU2322-MIB-XL",
+                    "item_tax_lines": [
+                        {
+                            "amount": 1.96,
+                            "rate": 0.0475,
+                            "name": "NC STATE TAX"
+                        },
+                        {
+                            "amount": 0.83,
+                            "rate": 0.02,
+                            "name": "NC COUNTY TAX"
+                        },
+                        {
+                            "amount": 0.21,
+                            "rate": 0.005,
+                            "name": "NC SPECIAL TAX"
+                        }
+                    ],
+                    "price": {
+                        "item_price": 59,
+                        "item_list_price": 59,
+                        "item_tax_lines": [
+                            {
+                                "amount": 1.96,
+                                "rate": 0.0475,
+                                "name": "NC STATE TAX"
+                            },
+                            {
+                                "amount": 0.83,
+                                "rate": 0.02,
+                                "name": "NC COUNTY TAX"
+                            },
+                            {
+                                "amount": 0.21,
+                                "rate": 0.005,
+                                "name": "NC SPECIAL TAX"
+                            }
+                        ],
+                        "item_discount_info": [
+                            {
+                                "type": "percentage",
+                                "original_value": 30,
+                                "price_adjustment": 17.7,
+                                "discount_ref": "SALE30",
+                                "coupon_code": "",
+                                "description": ""
+                            }
+                        ],
+                        "item_order_discount_info": []
+                    },
+                    "extended_attributes": [
+                        {
+                            "name": "is_gift_card",
+                            "value": "False"
+                        },
+                        {
+                            "name": "requires_shipping",
+                            "value": "True"
+                        },
+                        {
+                            "name": "external_item_id",
+                            "value": "12773457625157"
+                        }
+                    ]
+                },
+                {
+                    "external_item_id": "40022269657157",
+                    "product_id": "MWS2322-GSG-XL",
+                    "item_tax_lines": [
+                        {
+                            "amount": 2.13,
+                            "rate": 0.0475,
+                            "name": "NC STATE TAX"
+                        },
+                        {
+                            "amount": 0.9,
+                            "rate": 0.02,
+                            "name": "NC COUNTY TAX"
+                        },
+                        {
+                            "amount": 0.22,
+                            "rate": 0.005,
+                            "name": "NC SPECIAL TAX"
+                        }
+                    ],
+                    "price": {
+                        "item_price": 64,
+                        "item_list_price": 64,
+                        "item_tax_lines": [
+                            {
+                                "amount": 2.13,
+                                "rate": 0.0475,
+                                "name": "NC STATE TAX"
+                            },
+                            {
+                                "amount": 0.9,
+                                "rate": 0.02,
+                                "name": "NC COUNTY TAX"
+                            },
+                            {
+                                "amount": 0.22,
+                                "rate": 0.005,
+                                "name": "NC SPECIAL TAX"
+                            }
+                        ],
+                        "item_discount_info": [
+                            {
+                                "type": "percentage",
+                                "original_value": 30,
+                                "price_adjustment": 19.2,
+                                "discount_ref": "SALE30",
+                                "coupon_code": "",
+                                "description": ""
+                            }
+                        ],
+                        "item_order_discount_info": []
+                    },
+                    "extended_attributes": [
+                        {
+                            "name": "is_gift_card",
+                            "value": "False"
+                        },
+                        {
+                            "name": "requires_shipping",
+                            "value": "True"
+                        },
+                        {
+                            "name": "external_item_id",
+                            "value": "12773457657925"
+                        }
+                    ]
+                }
+            ],
+            "shipping_option": {
+                "service_level_identifier": "FedEx - Home Delivery",
+                "price": 0,
+                "tax": 0
+            }
+        }
+    ],
+    "payments": [
+        {
+            "processor": "shopify",
+            "correlation_ref": "6507745869893",
+            "type": "captured",
+            "amount": 140.4,
+            "method": "credit_card",
+            "processed_at": "2023-12-06T18:27:16-05:00",
+            "metadata": {
+                "avs_result_code": "Y",
+                "cvv_result_code": "M",
+                "credit_card_number": "•••• •••• •••• 9999",
+                "credit_card_company": "Visa",
+                "buyer_action_info": ""
+            }
+        }
+    ],
+    "extended_attributes": [
+        {
+            "name": "returnly_exchange",
+            "value": "False"
+        },
+        {
+            "name": "external_order_id",
+            "value": "1829017"
+        },
+        {
+            "name": "order_id",
+            "value": "5174588637253"
+        },
+        {
+            "name": "ext_channel_name",
+            "value": "USC"
+        },
+        {
+            "name": "is_historical",
+            "value": "False"
+        },
+        {
+            "name": "order_memo",
+            "value": ""
+        }
+    ],
+    "notification_blacklist": [
+        "shipment_dispatched",
+        "order_cancelled",
+        "refund_note_created"
+    ],
+    "ip_address": "127.0.0.1"
+}

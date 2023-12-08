@@ -39,9 +39,8 @@ class OrderInjectionV01:
         payload = kwargs.get("payload")
 
         # Validate the payload if not skipped
-        if kwargs.get('skip_validation') is True:
-            rule_set = self._create_order_validation_ruleset()
-            rule_set.test_dict = payload
+        if kwargs.get('skip_validation') is not True:
+            rule_set = self.validate_create_order_payload(payload)
 
             if not rule_set:
                 raise ValueError(rule_set.errors)
@@ -52,6 +51,16 @@ class OrderInjectionV01:
         response.raise_for_status()
 
         return response
+
+    def validate_create_order_payload(self, payload):
+        """
+        Method to validate the payload, allows for validation to be done by end user 
+        at another time then when trying to send if desired.
+        """
+        rule_set = self._create_order_validation_ruleset()
+        rule_set.test_dict = payload
+
+        return rule_set
 
     def _create_order_validation_ruleset(self):
         """
@@ -78,6 +87,7 @@ class OrderInjectionV01:
                           [self._build_shipment_validation_ruleset()]
                          ],
             'extended_attributes': [r.is_type(list),
+                                    r.length(max=100),
                                     [self._build_extended_attributes_validation_ruleset()]],
             'billing_address': [r.is_type(dict), self._build_address_validation_ruleset()],
             'payments': [r.is_type(list), [self._build_payment_validation_dict()]],
@@ -109,7 +119,7 @@ class OrderInjectionV01:
             'zip_code': str_32_char,
             'city': str_64_char,
             'state': str_32_char,
-            'address_line_1': [r.required(), r.is_type(str), r.length()],
+            'address_line_1': [r.required(), r.is_type(str), r.length(min=1, max=128)],
             'address_line_2': [r.is_type(str), r.length(max=256)],
             'phone': [r.is_type(str), r.length(max=128)]
         }
