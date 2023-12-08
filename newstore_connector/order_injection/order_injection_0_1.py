@@ -8,24 +8,13 @@ from api_toolkit.validate import Rules as r
 from api_toolkit.connector.decorators import json_or_full
 
 from ..request_lists import CURRENCY_LIST
+from ..ns_api_base_class import NewStoreAPIBase
 
-class OrderInjectionV01:
+class OrderInjectionV01(NewStoreAPIBase):
     """
     Class for handling Order Injection API requests
     """
     api_version = "0.1"
-
-    def __init__(self, **kwargs):
-        """
-        Initialize the OrderInjection Class
-        Expected kwargs:
-        - token: The authentication token for the NewStore API
-        - session: The requests Session object to use for requests
-        - base_url: The base url for the NewStore API
-        """
-        self.headers = kwargs.get("headers") # Token would be passed in the headers
-        self.session = kwargs.get("session")
-        self.base_url = kwargs.get("base_url")
 
     @json_or_full
     def create_order(self, **kwargs):
