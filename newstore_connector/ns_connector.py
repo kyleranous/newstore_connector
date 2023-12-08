@@ -39,6 +39,7 @@ class NewStoreConnector(APIConnector):
 
         # Initialize empty instance variables for the API Classes
         self._order_injection = None
+        self._order_notes = None
 
     def _validate_init_params(self, **kwargs):
         """
@@ -126,3 +127,28 @@ class NewStoreConnector(APIConnector):
             self._order_injection.base_url = self.base_url
         else:
             raise ValueError(f"Invalid OrderInjection Version: {value}")
+
+    @property
+    def order_notes(self):
+        """
+        Return the appropriate OrderNotes Class for the NewStore API
+        """
+        if not self._order_notes:
+            self.order_notes = "0.1.0"
+
+        return self._order_notes
+
+    @order_notes.setter
+    def order_notes(self, value):
+        """
+        Set the OrderNotes Class based on the version passed to the setter
+        """
+        if value == "0.1.0":
+            from .order_notes import OrderNotesV010
+
+            self._order_notes = OrderNotesV010()
+            self._order_notes.headers = self._get_headers()
+            self._order_notes.session = self.session
+            self._order_notes.base_url = self.base_url
+        else:
+            raise ValueError(f"Invalid OrderNotes Version: {value}")
