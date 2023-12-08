@@ -18,7 +18,7 @@
     "default": {
         "api-toolkit": {
             "git": "git+https://github.com/kyleranous/api_toolkit.git",
-            "ref": "9e57db9efcf4ee5d517261f41d104eaa72254b29"
+            "ref": "a8c9ceea7594a9e006221bf054ccd80a7d52a16b"
         },
         "certifi": {
             "hashes": [
