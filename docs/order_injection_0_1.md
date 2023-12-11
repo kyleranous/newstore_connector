@@ -4,10 +4,10 @@
 Methods for injecting Orders into NewStore
 
 ## Available Versions
- - [0.1](#v_0.1) *Default*
+ - [0.1](#v0.1) *Default*
 
 
-## v 0.1
+## v0.1
 
 [NewStore Documentation](https://docs.newstore.net/api/integration/order-management/order_injection_api)
 
