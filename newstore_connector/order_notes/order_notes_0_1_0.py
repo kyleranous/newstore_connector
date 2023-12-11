@@ -55,6 +55,7 @@ class OrderNotesV010(NewStoreAPIBase):
 
         return response
 
+    @json_or_full
     def create_item_note(self, order_uuid, item_uuid, **kwargs):
         """
         Create a note for an item
@@ -83,6 +84,7 @@ class OrderNotesV010(NewStoreAPIBase):
 
         return response
 
+    @json_or_full
     def update_note(self, order_uuid, note_uuid, **kwargs):
         """
         Runs PATCH update for notes API
@@ -111,6 +113,7 @@ class OrderNotesV010(NewStoreAPIBase):
 
         return response
 
+    @json_or_full
     def delete_note(self, order_uuid, note_uuid):
         """
         Delete a note
