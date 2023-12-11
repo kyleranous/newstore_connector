@@ -76,5 +76,5 @@ To set a specific version of a module (When available)
 ```
 
 ### Modules
- - [Order Injection](order_injection.md) `NewStoreConnector.order_injection` - Access to API's for Order Injection into NewStore
+ - [Order Injection](order_injection_0_1.md) `NewStoreConnector.order_injection` - Access to API's for Order Injection into NewStore
  - [Order Notes](order_notes.md) `NewStoreConnector.order_notes` - Access to NewStore Order Notes API
