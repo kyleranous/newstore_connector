@@ -15,9 +15,9 @@
  - tenant - *str* - The tenant being accessed IE: `fictionaltenant` or `fictionaltenant-staging`
  - env - *str* - The Environment being accessed, *Default*: `p`
  - client_id - *str* - The Client Id used to access the NewStore API's. See Note 1
- - client_secret - *str* - The Secret used with the Client ID  to access the NewStore API's. See Note 1
- - role - *str* - The role used for the NewStore API Session. *Default*: `iam:providers:read`. See Note 1
- - token - *str* - Used in place of `client_id`, `client_secret`, `role` for authentication. See Note 2
+ - client_secret - *str* - The Secret used with the Client ID  to access the NewStore API's. *See Note 1*
+ - role - *str* - The role used for the NewStore API Session. *Default*: `iam:providers:read`. *See Note 1*
+ - token - *str* - Used in place of `client_id`, `client_secret`, `role` for authentication. *See Note 2*
 
  **Notes**
  1. NewStore Authentication [Documentation](https://docs.p.newstore.partners/#/http/getting-started/newstore-rest-api/getting-started/authorization)
