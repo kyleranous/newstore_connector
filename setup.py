@@ -10,7 +10,7 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        "git+https://github.com/kyleranous/api_toolkit.git",
+        "https://github.com/kyleranous/api_toolkit.git",
         'requests'
     ]
 )
