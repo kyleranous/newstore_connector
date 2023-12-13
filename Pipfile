@@ -12,5 +12,4 @@ coverage = "*"
 pytest = "*"
 
 [requires]
-python_version = "3.9"
-python_full_version = "3.9.13"
+python_version >= "3.9"
