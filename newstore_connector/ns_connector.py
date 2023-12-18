@@ -35,6 +35,8 @@ class NewStoreConnector(APIConnector):
 
         # This needs to be done after super().__init__ because it uses the
         # session created in the parent class
+        self.token_ttl = None # Used if This class fetches a Token
+        self.roles = [] # Caching valid roles for client for potential future use
         self.token = kwargs.get("token") or self._get_auth_token()
 
         # Initialize empty instance variables for the API Classes
@@ -83,6 +85,8 @@ class NewStoreConnector(APIConnector):
         payload = f'grant_type=client_credentials&scope={m.url_encode(self.role)}'
         response = self.session.post(url, headers=headers, data=payload)
         response.raise_for_status()
+        self.token_ttl = response.json().get("expires_in")
+        self.roles = response.json().get("scope").split(" ")
         return response.json().get("access_token")
 
     def _get_headers(self):
