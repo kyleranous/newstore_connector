@@ -56,7 +56,7 @@ Keep this in mind when configuring retry settings.
 
 
 ## Modules
-Modules are used for access specific NewStore API Groups. `NewStoreConnector` Handles the management of the modules and will import the approriate modules at the time it is called. Each Module documentation contains a list of the available versions for each module, and indicates the default version that will be loaded if no version is specified. 
+Modules are used to access specific NewStore API Groups. `NewStoreConnector` Handles the management of the modules and will import the approriate modules at the time it is called. Each Module documentation contains a list of the available versions for each module, and indicates the default version that will be loaded if no version is specified. 
 
 ### Setting The Module Version
 To set a specific version of a module (When available)
