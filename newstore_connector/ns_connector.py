@@ -31,7 +31,7 @@ class NewStoreConnector(APIConnector):
         self._base_url = f"https://{self.tenant}.{self.env}.newstore.net/"
         self.client_id = kwargs.get("client_id")
         self.client_secret = kwargs.get("client_secret")
-        self.role = kwargs.get("role", "iam:providers:read")
+        self.role = kwargs.get("role")
 
         # This needs to be done after super().__init__ because it uses the
         # session created in the parent class
@@ -82,7 +82,8 @@ class NewStoreConnector(APIConnector):
             'Authorization': f'Basic {m.base64_encode(f"{self.client_id}:{self.client_secret}")}'
         }
 
-        payload = f'grant_type=client_credentials&scope={m.url_encode(self.role)}'
+        payload = 'grant_type=client_credentials'
+        payload += f'&scope={m.url_encode(self.role)}' if self.role else ''
         response = self.session.post(url, headers=headers, data=payload)
         response.raise_for_status()
         self.token_ttl = response.json().get("expires_in")

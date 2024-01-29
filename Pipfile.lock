@@ -1,12 +1,10 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "886b7277f47bc066c06a016c2a42f266aea649b948cea0f987c31f5cd3dae6fc"
+            "sha256": "2d8d30072c191db27109a87ed0adf5502604f8c7187baee5a51bab73b40f9990"
         },
         "pipfile-spec": 6,
-        "requires": {
-            "python_version": "3.7"
-        },
+        "requires": {},
         "sources": [
             {
                 "name": "pypi",
@@ -18,7 +16,7 @@
     "default": {
         "api-toolkit": {
             "git": "git+https://github.com/kyleranous/api_toolkit.git",
-            "ref": "7314d75d6586c8773e1ca3f738ea5796b8be9ab0"
+            "ref": "95a6101b2303a745f709acfe46993bb3904cd275"
         },
         "certifi": {
             "hashes": [
